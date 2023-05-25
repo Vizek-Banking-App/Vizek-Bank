@@ -1,6 +1,5 @@
-
-export default function Login(){
-    return <>
-    
-    </>
+export const Login = () => {
+  return (
+    <div>Login</div>
+  )
 }
