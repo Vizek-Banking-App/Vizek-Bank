@@ -1,11 +1,14 @@
-import { useState } from 'react'
+
+import SignUp from "./Components/Pages/SignUp"
 
 import './App.css';
-import { Login } from './Components/Pages/Login';
+
 
 function App() {
-  return  <>
-  <Login/>
+
+  return (
+    <>
+     Hello World
     </>
   
 }
