@@ -1,15 +1,16 @@
 
 import SignUp from "./Components/Pages/SignUp"
 
-import './App.css'
+import './App.css';
+
 
 function App() {
 
   return (
     <>
-     <SignUp/>
+     Hello World
     </>
-  )
+  
 }
 
 export default App

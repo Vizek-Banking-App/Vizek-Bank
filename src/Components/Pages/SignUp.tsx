@@ -30,7 +30,7 @@ export default function SignUp() {
             <AiOutlineLock color="red" size="22" className="loginIcons"/>
             <input type="text" id="PassWord" placeholder="Choose Password" />
           </div>
-          <button>Enter</button>
+          <button>create Account</button>
         </form>
       </div>
     </>
