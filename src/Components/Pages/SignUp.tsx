@@ -4,6 +4,7 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import {AiOutlineLock} from "react-icons/ai"
 import "./styles.scss";
 
+
 export default function SignUp() {
   return (
     <>
