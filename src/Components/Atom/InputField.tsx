@@ -1,3 +1,5 @@
+import "./Atoms.scss"
+
 type inputType = {
   type: string;
   label: string;
@@ -10,7 +12,7 @@ type inputType = {
 export default function InputField(props: inputType) {
   return (
     <>
-      <div>
+      <div className="inputField">
         <label htmlFor={props.for}>{props.label}</label>
         <input
           type={props.type}
