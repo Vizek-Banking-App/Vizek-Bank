@@ -1,6 +1,8 @@
 import { Button } from "../Atom/Button";
 import { useState } from "react";
 import InputField from "../Atom/InputField";
+import PasswordInputField from "../Atom/PasswordInputField";
+import HeadingText from "../Atom/HeadingText";
 import "./Pages.scss";
 
 export default function SignUp() {
@@ -10,10 +12,14 @@ export default function SignUp() {
   const [password, setPassword] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<any>();
 
-
   return (
     <>
       <div className="signUp-container">
+        <div>
+        <HeadingText content="Vizek Bank"/>
+        <p>Open yourself up to a world of possibilities</p>
+
+        </div>
         <h2>Sign up for an account</h2>
         <form className="signupForm">
           <div>
@@ -31,7 +37,7 @@ export default function SignUp() {
           <div>
             <InputField
               type="text"
-              id="firstName"
+              id="lastName"
               placeholder="Last Name"
               label="Last Name"
               for="lastName"
@@ -65,21 +71,20 @@ export default function SignUp() {
             />
           </div>
           <div>
-            <InputField
-              type="password"
-              id="password"
-              placeholder="Password"
-              label="Password"
-              for="password"
+            <PasswordInputField
+              placeholder="Choose Password"
               onchange={(e) => {
                 setPassword(e.target.value);
               }}
             />
           </div>
-<Button title="Signup" style={{color:"red", padding:"0.5rem"}} onClick={(e)=>{
- console.log(e)
-}}/>
-          
+          <Button
+            title="Signup"
+            style={{ color: "red", padding: "0.5rem" }}
+            onClick={(e) => {
+              console.log(e);
+            }}
+          />
         </form>
       </div>
     </>
