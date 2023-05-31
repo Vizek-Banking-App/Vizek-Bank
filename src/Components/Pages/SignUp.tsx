@@ -1,15 +1,15 @@
 import { Button } from "../Atom/Button";
-import {useState} from "react"
+import { useState } from "react";
 import InputField from "../Atom/InputField";
-import "./styles.scss";
-
+import "./Pages.scss";
 
 export default function SignUp() {
- const [firstName, setFirstName] = useState<string>("")
- const [lastName, setLastName] = useState<string>("")
- const [email, setEmail] = useState<string>("")
- const [password, setPassword] = useState<string>("")
- const [phoneNumber, setPhoneNumber] = useState<string>("")
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<any>();
+
 
   return (
     <>
@@ -17,23 +17,69 @@ export default function SignUp() {
         <h2>Sign up for an account</h2>
         <form className="signupForm">
           <div>
-            <InputField type="text" id="firstName" placeholder="First Name" label="First Name" for="firstName" onchange={(e)=>{
-              setFirstName(e.target.value)
-            }}/>
+            <InputField
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              label="First Name"
+              for="firstName"
+              onchange={(e) => {
+                setFirstName(e.target.value);
+              }}
+            />
           </div>
           <div>
-            <InputField type="text" id="firstName" placeholder="Last Name" label="Last Name" for="lastName" onchange={(e)=>{
-              setLastName(e.target.value)
-            }}/>
+            <InputField
+              type="text"
+              id="firstName"
+              placeholder="Last Name"
+              label="Last Name"
+              for="lastName"
+              onchange={(e) => {
+                setLastName(e.target.value);
+              }}
+            />
           </div>
           <div>
-            <InputField type="text" id="email" placeholder="Email" label="Email" for="Email" onchange={(e)=>{
-             setEmail(e.target.value)
-            }}/>
+            <InputField
+              type="text"
+              id="email"
+              placeholder="Email"
+              label="Email"
+              for="Email"
+              onchange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
           </div>
-         
-
-          <button>create Account</button>
+          <div>
+            <InputField
+              type="text"
+              id="phoneNumber"
+              placeholder="Contact Number"
+              label="Phone Number"
+              for="phoneNumber"
+              onchange={(e) => {
+                setPhoneNumber(e.target.value);
+              }}
+            />
+          </div>
+          <div>
+            <InputField
+              type="password"
+              id="password"
+              placeholder="Password"
+              label="Password"
+              for="password"
+              onchange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </div>
+<Button title="Signup" style={{color:"red", padding:"0.5rem"}} onClick={(e)=>{
+ console.log(e)
+}}/>
+          
         </form>
       </div>
     </>
