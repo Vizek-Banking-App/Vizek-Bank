@@ -1,5 +1,4 @@
 import "./Atoms.scss"
-
 type inputType = {
   type: string;
   label: string;
