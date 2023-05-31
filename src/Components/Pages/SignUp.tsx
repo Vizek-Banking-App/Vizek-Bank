@@ -1,8 +1,3 @@
-
-import { MdOutlinePersonOutline} from "react-icons/md";
-import { AiOutlineMail } from "react-icons/ai";
-import { IoIosPhonePortrait } from "react-icons/io";
-import {AiOutlineLock} from "react-icons/ai"
 import { Button } from "../Atom/Button";
 import { useState } from "react";
 import InputField from "../Atom/InputField";
@@ -16,6 +11,8 @@ export default function SignUp() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<any>();
+
+  console.log(firstName, lastName, email, password,phoneNumber);
 
   return (
     <>
@@ -31,7 +28,7 @@ export default function SignUp() {
             <InputField
               type="text"
               id="firstName"
-              placeholder="First Name"
+              placeholder="John"
               label="First Name"
               for="firstName"
               onchange={(e) => {
@@ -43,7 +40,7 @@ export default function SignUp() {
             <InputField
               type="text"
               id="lastName"
-              placeholder="Last Name"
+              placeholder="Austine"
               label="Last Name"
               for="lastName"
               onchange={(e) => {
@@ -55,7 +52,7 @@ export default function SignUp() {
             <InputField
               type="text"
               id="email"
-              placeholder="Email"
+              placeholder="johnaustine@gmail.com"
               label="Email"
               for="Email"
               onchange={(e) => {
@@ -67,7 +64,7 @@ export default function SignUp() {
             <InputField
               type="text"
               id="phoneNumber"
-              placeholder="Contact Number"
+              placeholder="080 4849 3839"
               label="Phone Number"
               for="phoneNumber"
               onchange={(e) => {
