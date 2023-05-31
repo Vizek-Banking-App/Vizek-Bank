@@ -1,5 +1,8 @@
-import "./Atoms.scss";
+<<<<<<< HEAD
+=======
+import "./Atoms.scss"
 
+>>>>>>> 5ad457554fed930988e01a013ab8c05ce2fe281d
 type inputType = {
   type: string;
   label: string;

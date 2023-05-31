@@ -1,3 +1,15 @@
+$accent_color: rgb(0, 76, 255);
+$white: white;
+// variable
+
+@mixin flexcoloumn{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
 .signupForm{
    input{
     padding: 0.5rem 0 0.5rem 1.6rem;
@@ -13,3 +25,55 @@
         position: absolute;
     }
 }
+
+
+
+
+.home_page{
+    @include flexcoloumn()
+}
+
+.home_page{
+text-align: center;
+
+h1{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.login_link{
+    color: $accent_color;
+}
+
+.homeimg{
+    width: 70%;
+    max-width:300px;
+    margin: 2rem 0px;
+}
+
+button{
+    background-color: $accent_color;
+    color: $white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin: 10px 0px;
+    a:-webkit-any-link{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+.login_text{
+    a:-webkit-any-link{
+        color: $accent_color;
+        text-decoration: none;
+    }
+}
+
+
+}
+
+
