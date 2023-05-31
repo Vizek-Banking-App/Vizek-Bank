@@ -1,8 +1,8 @@
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./Components/Pages/SignUp"
-import Signin from "./Components/Pages/SignIn";
+import Login from "./Components/Pages/Login";
 import Home from "./Components/Pages/Home";
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Link, Outlet} from "react-router-dom"
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom"
 import './App.css';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 createRoutesFromElements(
 <Route path="/" element={<Home/>}>
 <Route path="/signup" element={<SignUp/>} />
-<Route path="signin" element={<Signin/>}/>
+<Route path="signin" element={<Login/>}/>
 </Route>
 )
   )
@@ -21,7 +21,6 @@ createRoutesFromElements(
 <RouterProvider router={router}/>
 <div>home page</div></>
   )
-  
 }
 
 // const Root =() =>{
