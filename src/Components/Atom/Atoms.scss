@@ -1,21 +1,52 @@
+$grey: #62686ced;
+$accent_color: #004cff;
+$white: white;
+
 .inputField{
     display: flex;
     flex-direction: column;
     input{
         padding: 0.5rem;
         font-size: 1rem;
-        margin-bottom: 1.3rem;
-        width: 20rem;
-        border-width: 0.1rem;
+        margin-bottom: 1.7rem;
+        width: 300px;
+        border: 0.1rem solid $grey;
         border-radius: 0.5rem;
         outline: none;
+        height: 30px;
        }
     label{
         margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-size: 12px;
+
     }
     .Eye{
         position: absolute;
         left: 19.8rem;
         margin-top: 2.3rem;
+    }
+}
+
+.atom_button{
+    color: $white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 10px 0px;
+    font-size: .7rem;
+    width: 317px;
+    background-color: $accent_color;
+}
+
+@media  screen and (min-width: 1024px) {
+    .inputField{
+        input{
+            width: 350px;
+        }
+    }
+    .atom_button{
+        width: 368px;
     }
 }

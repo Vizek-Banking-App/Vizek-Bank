@@ -2,10 +2,10 @@ type heading = {
   content: string;
 };
 
-export default function HeadingText(props: heading) {
+export  function HeadingText(props: heading) {
   return (
     <>
-      <h1>{props.content}</h1>
+      <h1 className="header_text">{props.content}</h1>
     </>
   );
 }

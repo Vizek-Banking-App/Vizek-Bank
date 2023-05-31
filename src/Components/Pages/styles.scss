@@ -1,17 +1,24 @@
-$accent_color: rgb(0, 76, 255);
+$accent_color: #004cff;
 $white: white;
 // variable
 
-@mixin flexcoloumn{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
+@mixin flexcoloumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.signupForm{
-   input{
+@mixin flexdirection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.signupForm {
+  input {
     padding: 0.5rem 0 0.5rem 1.6rem;
     font-size: 1rem;
     margin-bottom: 1.3rem;
@@ -19,59 +26,115 @@ text-align: center;
     border-width: 0.1rem;
     border-radius: 0.5rem;
     outline: none;
-   }
-    .loginIcons{
-        padding: 0.4rem 0 0 0.1rem;
-        position: absolute;
+  }
+  .loginIcons {
+    padding: 0.4rem 0 0 0.1rem;
+    position: absolute;
+  }
+}
+
+.home_page, .login_page{
+  @include flexcoloumn();
+}
+
+.login_page{
+    padding: 3rem 2rem;
+    h2{
+        margin-bottom: 1rem;
+    }
+    .login_img{
+        display: none;
     }
 }
 
+.home_page {
+  text-align: center;
 
-
-
-.home_page{
-    @include flexcoloumn()
-}
-
-.home_page{
-text-align: center;
-
-h1{
+  h1 {
     font-weight: bold;
     font-size: 2.5rem;
-}
+  }
 
-.login_link{
+  .login_link {
     color: $accent_color;
-}
+  }
 
-.homeimg{
+  .homeimg {
     width: 70%;
-    max-width:300px;
+    max-width: 200px;
     margin: 2rem 0px;
-}
+  }
 
-button{
+  button {
     background-color: $accent_color;
     color: $white;
     font-weight: bold;
     border: 0px;
     border-radius: 10px;
-    padding: 1rem 1.2rem;
+    padding: 14px;
     margin: 10px 0px;
-    a:-webkit-any-link{
-        color: white;
-        text-decoration: none;
+    font-size: 0.7rem;
+    width: 120px;
+    a:-webkit-any-link {
+      color: white;
+      text-decoration: none;
     }
+  }
 }
 
+.login_text {
+  a:-webkit-any-link {
+    color: $accent_color;
+    text-decoration: none;
+  }
+  text-align: center;
+  margin: 2rem 0;
 }
 
-.login_text{
-    a:-webkit-any-link{
-        color: $accent_color;
-        text-decoration: none;
+.option_text{
+    @include flexdirection()
+}
+.option_text{
+div{
+    display: block;
+    width: 100%;
+}
+p{
+    padding: 10px;
+}
+}
+
+.google_button{
+        display: flex; 
+        align-items: center;
+        padding: .6rem 1.3rem;
+        margin-bottom:  1.2rem;
+        border-radius: 2rem;
+        border: 2px solid rgb(147, 147, 147);
+        background-color: white;
+        width: 320px;
+         span{
+            margin-left: 30%;
+            font-weight: 700;  
+           }
+    
+}
+
+@media screen and  (min-width: 1024px){
+
+    .login_page{
+        @include flexdirection()
     }
+    .login_page{
+        padding: 5rem 3rem;
+        .login_img{
+            display: flex;
+            width: 600px;
+        }
+    }
+
+    .google_button{
+        width: 360px;
+    }
+
 }
-
-

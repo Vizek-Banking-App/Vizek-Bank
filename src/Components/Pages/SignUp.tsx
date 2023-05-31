@@ -1,13 +1,8 @@
-
-import { MdOutlinePersonOutline} from "react-icons/md";
-import { AiOutlineMail } from "react-icons/ai";
-import { IoIosPhonePortrait } from "react-icons/io";
-import {AiOutlineLock} from "react-icons/ai"
 import { Button } from "../Atom/Button";
 import { useState } from "react";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
-import HeadingText from "../Atom/HeadingText";
+import {HeadingText} from "../Atom/HeadingText";
 import "./Pages.scss";
 
 export default function SignUp() {
@@ -85,7 +80,7 @@ export default function SignUp() {
           </div>
           <Button
             title="Signup"
-            style={{ color: "red", padding: "0.5rem" }}
+            // style={{ color: "red", padding: "0.5rem" }}
             onClick={(e) => {
               console.log(e);
             }}
