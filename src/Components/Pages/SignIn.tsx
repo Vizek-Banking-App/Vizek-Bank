@@ -1,9 +1,10 @@
-
 export default function Signin (){
     
-  return<>
-
-  </>
+  return(
+    <div>
+      A new text
+    </div>
+  )
 }
 
 
