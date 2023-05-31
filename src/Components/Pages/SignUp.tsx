@@ -1,8 +1,3 @@
-
-import { MdOutlinePersonOutline} from "react-icons/md";
-import { AiOutlineMail } from "react-icons/ai";
-import { IoIosPhonePortrait } from "react-icons/io";
-import {AiOutlineLock} from "react-icons/ai"
 import { Button } from "../Atom/Button";
 import { useState } from "react";
 import InputField from "../Atom/InputField";
