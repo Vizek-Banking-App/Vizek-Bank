@@ -1,0 +1,175 @@
+$accent_color: #004cff;
+$white: white;
+// variable
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flexcoloumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexdirection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.home_page,
+.login_page {
+  @include flexcoloumn();
+}
+
+.login_page {
+  padding: 2rem 4rem;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  .login_img {
+    display: none;
+  }
+}
+
+.home_page {
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  .login_link {
+    color: $accent_color;
+  }
+
+  .homeimg {
+    width: 70%;
+    max-width: 200px;
+    margin: 2rem 0px;
+  }
+
+  button {
+    background-color: $accent_color;
+    color: $white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 10px 0px;
+    font-size: 0.7rem;
+    width: 120px;
+    a:-webkit-any-link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.login_text {
+  a:-webkit-any-link {
+    color: $accent_color;
+    text-decoration: none;
+  }
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.option_text {
+  @include flexdirection();
+}
+.option_text {
+  div {
+    display: block;
+    width: 100%;
+  }
+  p {
+    padding: 10px;
+  }
+}
+
+.google_button {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1.3rem;
+  margin-bottom: 1.2rem;
+  border-radius: 2rem;
+  border: 2px solid rgb(147, 147, 147);
+  background-color: white;
+  width: 320px;
+  span {
+    margin-left: 30%;
+    font-weight: 700;
+  }
+}
+
+.signupContainer {
+  background-image: url("../../Assets/images/signupMobile.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .signupImg {
+    display: none;
+  }
+  .signUp {
+    padding: 2rem 0 2rem 0;
+    h2 {
+      margin: 0.3rem 0 0.9rem 0;
+    }
+    .footNote{
+      text-align: center;
+    }
+    .footNoteLast{
+      margin-top: 1.5rem;
+    }
+    a{
+      text-decoration: none
+    }
+    .link{
+      color: #004cff
+    }
+   
+  }
+
+  .signUp {
+    @include flexcoloumn();
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .signupContainer {
+    display: flex;
+    background-image: none;
+    background-color: aliceblue;
+    .signupImg {
+      display: block;
+      width: 50%;
+    }
+    .signUp {
+      margin: auto;
+    }
+  }
+
+  .login_page {
+    @include flexdirection();
+  }
+  .login_page {
+    padding: 0rem 3rem;
+    height: 100vh;
+    overflow: hidden;
+    .login_img {
+      display: flex;
+      width: 600px;
+    }
+  }
+
+  .google_button {
+    width: 360px;
+  }
+}
