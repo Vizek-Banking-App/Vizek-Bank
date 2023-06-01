@@ -1,4 +1,4 @@
-import { Button } from "../Atom/Button";
+import  {Button}  from "../Atom/Button";
 import { useState } from "react";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
@@ -82,7 +82,6 @@ export default function SignUp() {
           </div>
           <Button
             title="Signup"
-            style={{ color: "red", padding: "0.5rem" }}
             onClick={(e) => {
               console.log(e);
             }}
