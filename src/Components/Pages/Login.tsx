@@ -14,6 +14,7 @@ const [password, setPassword] = useState<string>("");
 
     const logInfunction = ()=>{
         console.log("log_in")
+        console.log(email, password)
     }
     
     return (
@@ -26,7 +27,7 @@ const [password, setPassword] = useState<string>("");
             <h2>Log in to your account</h2>
           <InputField
             type="email"
-            label="Your emial"
+            label="Your Email"
             placeholder="johndoe@gmail.com"
             for="email"
             id="email"

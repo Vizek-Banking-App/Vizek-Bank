@@ -2,6 +2,11 @@ $accent_color: #004cff;
 $white: white;
 // variable
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 @mixin flexcoloumn {
   display: flex;
   flex-direction: column;
@@ -126,7 +131,9 @@ p{
         @include flexdirection()
     }
     .login_page{
-        padding: 5rem 3rem;
+        padding: 0rem 3rem;
+        height: 100vh;
+        overflow: hidden;
         .login_img{
             display: flex;
             width: 600px;
