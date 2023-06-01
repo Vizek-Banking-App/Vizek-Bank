@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
-import login from "../../Assets/images/login2.svg";
+import login from "../../Assets/images/login.avif";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
-import { Button } from "../Atom/Button";
-import google_icon from "../../Assets/images/icons8-google.svg";
+import  {Button}  from "../Atom/Button";
+import google_icon from "../../Assets/images/search.png";
+
 
 export default function Login() {
-
     const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
+const [password, setPassword] = useState<string>("");
 
     const logInfunction = ()=>{
         console.log("log_in")
     }
-  return (
+    
+    return (
     <>
       <main className="login_page">
         <section>
@@ -34,10 +35,10 @@ export default function Login() {
         <PasswordInputField
          placeholder="****"
          onchange={(e)=>{setPassword(e.target.value)}}/>
-
+    
          <Button  title="Login"  onClick={logInfunction}/>
-
-
+    
+    
          <div className="option_text">
             <div><hr/></div>
             <p>or</p>
@@ -53,5 +54,5 @@ export default function Login() {
         </section>
       </main>
     </>
-  );
+      );
 }

@@ -6,6 +6,6 @@ type Button = {
 
 export const Button = (prop: Button) => {
   return (
- <button className="atom_button" onClick={prop.onClick} >{prop.title}</button>
+ <button className="atom_button"  onClick={prop.onClick} >{prop.title}</button>
   )
 }

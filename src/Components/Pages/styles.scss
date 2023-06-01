@@ -17,12 +17,9 @@ $white: white;
   text-align: start;
 }
 
-.signupForm{
-   input{
+.signupForm {
+  input {
     padding: 0.5rem 0 0.5rem 1.6rem;
-.signupForm{
-   input{
-    padding: 0.5rem;
     font-size: 1rem;
     margin-bottom: 1.3rem;
     width: 20rem;
@@ -34,8 +31,6 @@ $white: white;
     padding: 0.4rem 0 0 0.1rem;
     position: absolute;
   }
-   }
-}
 }
 
 .home_page, .login_page{
@@ -43,7 +38,7 @@ $white: white;
 }
 
 .login_page{
-    padding: 3rem 2rem;
+    padding: 2rem 4rem;
     h2{
         margin-bottom: 1rem;
     }
