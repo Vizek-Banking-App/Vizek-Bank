@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.scss";
+import "./Pages.scss";
 import login from "../../Assets/images/login.avif";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
@@ -34,7 +34,7 @@ const [password, setPassword] = useState<string>("");
             onchange={(e)=>{ setEmail(e.target.value)}}
           />
         <PasswordInputField
-         placeholder="****"
+         placeholder="⁕⁕⁕⁕⁕⁕⁕⁕"
          onchange={(e)=>{setPassword(e.target.value)}}/>
     
          <Button  title="Login"  onClick={logInfunction}/>
@@ -47,9 +47,9 @@ const [password, setPassword] = useState<string>("");
          </div>
          <button className="google_button"> <img src={google_icon} alt="google_icon"/><span>Continue with Google</span></button>
           <p className="login_text">
-            Don't have an accout ?{" "}
+            Don't have an account ?{" "}
             <span className="login_link">
-              <Link to="/Signup">Create an accout</Link>
+              <Link to="/Signup">Create an account</Link>
             </span>
           </p>
         </section>
