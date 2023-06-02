@@ -1,7 +1,7 @@
 // import React from 'react';
 // import { Link, Outlet } from "react-router-dom";
 import homebg from "../../Assets/images/undraw_sign_in_re_o58h.svg"
-import   "./styles.scss"
+import   "./Pages.scss"
 import { Link } from "react-router-dom";
 const Home = () => {
   return (

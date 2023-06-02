@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.scss";
+import "./Pages.scss";
 import login from "../../Assets/images/login.avif";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
