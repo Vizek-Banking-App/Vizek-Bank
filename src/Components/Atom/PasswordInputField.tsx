@@ -1,4 +1,4 @@
-import { RxEyeClosed } from "react-icons/rx";
+import {FaRegEyeSlash} from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 import { useState } from "react";
 import "./Atoms.scss"
@@ -30,7 +30,7 @@ export default function PasswordInputField(props: passwordType) {
           placeholder={props.placeholder}
           onChange={props.onchange}
         />
-        <div className="Eye">{types === "text" ?  <span onClick={eyeClosed}><FaRegEye /></span> :  <span onClick={eyeOpen}><RxEyeClosed /></span> }</div>
+        <div className="Eye">{types === "text" ?  <span onClick={eyeClosed}><FaRegEye /></span> :  <span onClick={eyeOpen}><FaRegEyeSlash /></span> }</div>
       </div>
     </>
   );
