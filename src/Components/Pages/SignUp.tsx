@@ -3,7 +3,7 @@ import { useState } from "react";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
 import HeadingText from "../Atom/HeadingText";
-import signup from "../../Assets/images/signup .png";
+import signup from "../../Assets/images/signup.jpg";
 import "./Pages.scss";
 import { Link } from "react-router-dom";
 
@@ -12,17 +12,19 @@ export default function SignUp() {
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [phoneNumber, setPhoneNumber] = useState<any>();
 
-  console.log(firstName, lastName, email, password, phoneNumber);
+  console.log(firstName, lastName, email, password);
 
   return (
     <>
       <section className="signupContainer">
-        <img src={signup} alt="" className="signupImg" />
+        <div className="signupImg">
+          <img src={signup} alt="" />
+          <h2>Welcome</h2>
+        </div>
         <div className="signUp">
-          <HeadingText content="Vizek Bank" />
-          <h2>Sign up for an account</h2>
+          <HeadingText content="Sign up for an account" />
+
           <form className="signupForm">
             <div>
               <InputField
@@ -60,18 +62,7 @@ export default function SignUp() {
                 }}
               />
             </div>
-            <div>
-              <InputField
-                type="text"
-                id="phoneNumber"
-                placeholder="080 4849 3839"
-                label="Phone Number"
-                for="phoneNumber"
-                onchange={(e) => {
-                  setPhoneNumber(e.target.value);
-                }}
-              />
-            </div>
+
             <div>
               <PasswordInputField
                 placeholder="Choose Password"
@@ -90,7 +81,12 @@ export default function SignUp() {
               <p>By submiting this form, I agree to Vizek's</p>
               <a href="#">Terms & Services</a> and{" "}
               <a href="#">Privacy Policies</a>
-              <p className="footNoteLast">Already have an Account, <Link to="/Login" className="link">Login</Link></p> 
+              <p className="footNoteLast">
+                Already have an Account,{" "}
+                <Link to="/Login" className="link">
+                  Login
+                </Link>
+              </p>
             </div>
           </form>
         </div>
