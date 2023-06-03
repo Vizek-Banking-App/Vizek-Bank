@@ -5,7 +5,7 @@ import login from "../../Assets/images/login.avif";
 import InputField from "../Atom/InputField";
 import PasswordInputField from "../Atom/PasswordInputField";
 import  {Button}  from "../Atom/Button";
-import google_icon from "../../Assets/images/search.png";
+import { GoogleButton } from "../Atom/GoogleButton";
 
 
 export default function Login() {
@@ -45,7 +45,9 @@ const [password, setPassword] = useState<string>("");
             <p>or</p>
             <div><hr/></div>
          </div>
-         <button className="google_button"> <img src={google_icon} alt="google_icon"/><span>Continue with Google</span></button>
+         <GoogleButton
+         text="Continue with google"
+         Onclick={logInfunction}/>
           <p className="login_text">
             Don't have an account ?{" "}
             <span className="login_link">
