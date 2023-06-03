@@ -1,4 +1,7 @@
-$accent_color: #007DFE;
+
+$accent_color: #004cff;
+$primary-blue: #007dfe;
+
 $white: white;
 // variable
 * {
@@ -6,12 +9,20 @@ $white: white;
   margin: 0;
 }
 
+
 @mixin flexcoloumn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+@mixin flexrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @mixin flexdirection {
   display: flex;
@@ -96,29 +107,27 @@ $white: white;
 
 
 .signupContainer {
-  overflow: hidden;
   height: 100vh;
-  background-image: url("../../Assets/images/signupMobile.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
 
   .signupImg {
     display: none;
   }
   .signUp {
-    padding: 2rem 0 1rem 0;
+    padding: 3rem 0 1rem 0;
     h1{
-      margin-bottom:1rem;
+      margin-bottom:1.5rem;
       color: $accent_color;
     }
     .footNote{
       text-align: center;
+      font-size: 0.9rem;
     }
     .footNoteLast{
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
     }
     a{
-      text-decoration: none
+      text-decoration: none;
+      color: $primary-blue;
     }
     .link{
       color: $accent_color
@@ -133,30 +142,27 @@ $white: white;
 
 @media screen and (min-width: 1024px) {
   .signupContainer {
-    display: flex;
-    background-image: none;
-    background-color: aliceblue;
 
+   .signUp{
+    @include flexrow()
+  }
     .signupImg {
       display: block;
-      width: 45%;
-      h2{
-        position: fixed;
-        top: 15rem;
-        left: 22%;
-        font-weight: bold;
-        font-size: 3rem;
-        color: $white;
-        transform: translate(-50%, 0);
-      }
-      
+      position: fixed;
+      width: 50%;
+      top: 2rem;
+      left: 28%;
+      transform: translate(-50%, 0);
       img{
         width: 100%;
         height: 100%;
       }
     }
     .signUp {
-      margin: auto;
+      margin-left: auto;
+      width: 50%;
+      display: flex;
+
     }
   }
 

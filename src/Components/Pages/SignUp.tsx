@@ -12,19 +12,18 @@ export default function SignUp() {
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("")
 
-  console.log(firstName, lastName, email, password);
+  console.log(firstName, lastName, email, password, phoneNumber);
 
   return (
     <>
       <section className="signupContainer">
         <div className="signupImg">
           <img src={signup} alt="" />
-          <h2>Welcome</h2>
         </div>
         <div className="signUp">
           <HeadingText content="Sign up for an account" />
-
           <form className="signupForm">
             <div>
               <InputField
@@ -62,7 +61,17 @@ export default function SignUp() {
                 }}
               />
             </div>
-
+            <InputField
+              type="text"
+              id="phoneNumber"
+              placeholder="Contact Number"
+              label="Phone Number"
+              for="phoneNumber"
+              onchange={(e)=>{
+                setPhoneNumber(e.target.value
+                  )
+              }}
+            />
             <div>
               <PasswordInputField
                 placeholder="Choose Password"

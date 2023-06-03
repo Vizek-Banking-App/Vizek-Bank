@@ -3,10 +3,12 @@
 import homebg from "../../Assets/images/undraw_sign_in_re_o58h.svg"
 import   "./Pages.scss"
 import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
 <main className="home_page">
+
 
 <h1>Get started</h1>
 <img className="homeimg" src={homebg} alt="welcome image"/>
@@ -16,5 +18,6 @@ const Home = () => {
     </>
   )
 }
+
 
 export default Home;
