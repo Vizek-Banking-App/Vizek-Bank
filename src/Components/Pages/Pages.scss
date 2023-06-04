@@ -49,6 +49,7 @@ $white: white;
 
 .home_page {
   text-align: center;
+  padding: 3rem 1rem;
 
   h1 {
     font-weight: bold;
@@ -141,6 +142,11 @@ $white: white;
 }
 
 @media screen and (min-width: 1024px) {
+
+  .home_page {
+    padding: 5rem 2rem;
+  }
+
   .signupContainer {
 
    .signUp{
