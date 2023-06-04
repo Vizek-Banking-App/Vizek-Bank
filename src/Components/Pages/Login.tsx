@@ -27,7 +27,7 @@ const [password, setPassword] = useState<string>("");
             <h2>Log in to your account</h2>
           <InputField
             type="email"
-            label="Your Email"
+            label="Your email"
             placeholder="johndoe@gmail.com"
             for="email"
             id="email"

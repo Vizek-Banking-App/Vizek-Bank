@@ -172,7 +172,7 @@ $white: white;
   .login_page {
     padding: 0rem 2.8rem;
     height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
     .login_img {
       display: flex;
       width: 600px;
@@ -184,6 +184,6 @@ $white: white;
 
 @media screen and (min-width: 1240){
   .login_page {
-    padding: 0rem 6rem;
+    padding: 0rem 4rem;
 }
 }
